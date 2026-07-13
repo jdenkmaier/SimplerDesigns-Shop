@@ -1,0 +1,67 @@
+﻿<div class="modal fade" id="modalUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleDialogUser" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h1 class="modal-title fs-5" id="modalTitleDialogUser">Nutzer bearbeiten</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-6">
+            <label for="textLoginNameDialogUser">Login Name</label>
+            <input type="text" id="textLoginNameDialogUser" class="form-control" />
+          </div>
+          <div class="col-6">
+            <label for="selectRoleDialogUser">Rolle</label>
+            <select id="selectRoleDialogUser" class="form-select">
+              <option value="0">Standard</option>
+              <option value="1">Admin</option>
+              <option value="5">Kunde</option>
+              <option value="10">Mitbearbeiter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-3">
+          <div class="col-6">
+            <label for="textNameDialogUser">Name</label>
+            <input type="text" id="textNameDialogUser" class="form-control" />
+          </div>
+          <div class="col-6">
+            <label for="textSurnameDialogUser">Nachname</label>
+            <input type="text" id="textSurnameDialogUser" class="form-control" />
+          </div>
+        </div>
+
+        <div class="row g-3 mt-3">
+          <div class="col-6">
+            <label for="textMailDialogUser">E-Mail</label>
+            <input type="email" id="textMailDialogUser" class="form-control" />
+          </div>
+          <div class="col-6">
+            <label for="dateJoinDateDialogUser">Beitrittsdatum</label>
+            <input type="date" id="dateJoinDateDialogUser" class="form-control" />
+          </div>
+        </div>
+
+        <hr class="mt-4">
+        <h6 class="mb-2">Letzte Bestellungen</h6>
+        <table class="table table-sm table-hover mb-0" id="tableRecentOrdersDialogUser">
+          <thead>
+            <tr>
+              <th>Bestellnummer</th>
+              <th>Datum</th>
+              <th class="text-end">Preis</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-success" id="buttonSaveDialogUser"><i class="bi bi-check-lg me-2"></i>Speichern</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-lg me-2"></i>Abbrechen</button>
+      </div>
+    </div>
+  </div>
+</div>

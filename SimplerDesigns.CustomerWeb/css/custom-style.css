@@ -1,0 +1,250 @@
+/* ------------------------------------------------------------------ */
+/* #font Import */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quintessential';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../fonts/Quintessential-Regular.ttf') format('truetype');
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------ */
+/* #region Text Styles */
+
+h1, h2 {
+    font-family: 'Quintessential', serif;
+    font-size: 1.5rem; /* 24px */
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+p, span, div, li, a, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem; /* 15px */
+}
+
+.btn-primary {
+    background-color: var(--sd-gold);
+    color: var(--sd-grey);
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-primary:hover {
+    background-color: #ac9454;
+    color: var(--sd-grey);
+}
+
+.btn-secondary {
+    background-color: var(--sd-grey);
+    color: var(--sd-dark);
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-primary-custom {
+    background-color: var(--sd-gold);
+    color: var(--sd-grey);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.625rem; /* 10px */
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-primary-custom:hover {
+    background-color: #ac9454;
+    color: var(--sd-grey);
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+:root {
+    /*allgemeine Farben und Fonts*/
+    --sd-grey: #D5D5D5;
+    --sd-dark: #141414;
+    --sd-gold: #7C6C3C;
+    --sd-font-body: 'Montserrat', sans-serif;
+
+    /*navigation*/
+    --nav-bg: var(--sd-grey);
+    --nav-text: var(--sd-dark);
+    --nav-sale: var(--sd-gold);
+    --nav-font: 'Quintessential', cursive, sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* #region Nav Bar */
+
+/*settings for brand logo in navigation*/
+.navbar-brand img {
+    width: 100px;
+}
+
+.custom-navbar {
+    background-color: var(--nav-bg) !important;
+    font-size: 1.2rem;
+}
+
+.custom-navbar .custom-navbar-row {
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.custom-navbar .nav-menu-group {
+    gap: 1.5rem;
+}
+
+.custom-navbar .nav-menu-item {
+    padding: 0 0.25rem;
+}
+
+.custom-navbar .nav-link {
+    color: var(--nav-text) !important;
+    padding: 0.5rem 0;
+    font-family: var(--nav-font);
+}
+
+.custom-navbar .nav-link:hover {
+    color: #000 !important;
+}
+
+.custom-navbar .nav-sale-link {
+    color: var(--nav-sale) !important;
+    text-decoration: underline;
+}
+
+.custom-navbar .custom-navbar-center-grid {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+/* Right-aligned nav group (user, cart, search) */
+.custom-navbar .nav-right {
+    gap: 1rem;
+}
+
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* #region Footer */
+footer {
+    background-color: var(--sd-grey);
+}
+
+footer a {
+    color: var(--sd-dark);
+    text-decoration: none;
+}
+
+footer h2 {
+    color: var(--sd-dark);
+}
+
+p.newletter-banner {
+    color: var(--sd-grey);
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* #region Highlights Grid */
+
+.highlights-grid {
+    padding: 0 8rem;
+}
+
+.article-grid-row {
+    --bs-gutter-x: 6rem;
+    --bs-gutter-y: 3rem;
+}
+
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* #region Mobile Fixes */
+
+@media (max-width: 991.98px) {
+
+    /* Nav: alles linksbündig untereinander */
+    .custom-navbar .custom-navbar-center-grid {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-navbar .nav-menu-group {
+        flex-direction: column !important;
+        gap: 0.5rem;
+    }
+
+    .nav-right-group {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .custom-navbar .nav-right {
+        flex-direction: row !important;
+        margin-left: 0 !important;
+    }
+
+    /* Collage: vh-100 auf gestapelten Spalten verhindert normales Stacking */
+    .homepage-collage .row {
+        height: auto !important;
+    }
+
+    .homepage-collage .col-lg-7 {
+        height: 65vw !important;
+        min-height: 220px;
+    }
+
+    .homepage-collage .col-lg-5 {
+        height: auto !important;
+    }
+
+    .collage-img {
+        height: 200px !important;
+    }
+
+    .collage-text {
+        height: auto !important;
+    }
+
+    /* Highlights: Padding und Gutter auf Mobile reduzieren */
+    .highlights-grid {
+        padding: 0 1rem;
+    }
+
+    .article-grid-row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+    }
+}
+
+/* #endregion */
+/* ------------------------------------------------------------------ */

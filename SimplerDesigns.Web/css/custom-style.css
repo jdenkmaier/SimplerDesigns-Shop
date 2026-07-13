@@ -1,0 +1,208 @@
+/* ------------------------------------------------------------------ */
+/* #font Import */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quintessential';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../fonts/Quintessential-Regular.ttf') format('truetype');
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------ */
+/* #region Text Styles */
+
+h1, h2 {
+    font-family: 'Quintessential', serif;
+    font-size: 1.5rem; /* 24px */
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+p, span, div, li, a, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem; /* 15px */
+}
+
+.btn-primary {
+    background-color: var(--sd-gold);
+    color: var(--sd-grey);
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-primary:hover {
+    background-color: #ac9454;
+    color: var(--sd-grey);
+}
+
+.btn-secondary {
+    background-color: var(--sd-grey);
+    color: var(--sd-dark);
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-primary-custom {
+    background-color: var(--sd-gold);
+    color: var(--sd-grey);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.625rem; /* 10px */
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-primary-custom:hover {
+    background-color: #ac9454;
+    color: var(--sd-grey);
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+:root {
+    /*allgemeine Farben und Fonts*/
+    --sd-grey: #D5D5D5;
+    --sd-dark: #141414;
+    --sd-gold: #7C6C3C;
+    --sd-font-body: 'Montserrat', sans-serif;
+
+    /*navigation*/
+    --nav-bg: var(--sd-grey);
+    --nav-text: var(--sd-dark);
+    --nav-sale: var(--sd-gold);
+    --nav-font: 'Quintessential', cursive, sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* #region Nav Bar */
+
+/*settings for brand logo in navigation*/
+.navbar-brand img {
+    width: 100px;
+}
+
+.custom-navbar {
+    background-color: var(--nav-bg) !important;
+    font-size: 1.2rem;
+}
+
+.custom-navbar .custom-navbar-row {
+    padding: 0 1rem;
+}
+
+.custom-navbar .nav-menu-group {
+    gap: 1.5rem;
+}
+
+.custom-navbar .nav-menu-item {
+    padding: 0 0.25rem;
+}
+
+.custom-navbar .nav-link {
+    color: var(--nav-text) !important;
+    padding: 0.5rem 0;
+    font-family: var(--nav-font);
+}
+
+.custom-navbar .nav-link:hover {
+    color: #000 !important;
+}
+
+.custom-navbar .nav-sale-link {
+    color: var(--nav-sale) !important;
+    text-decoration: underline;
+}
+
+/* Right-aligned nav group (user, cart, search) */
+.custom-navbar .nav-right {
+    margin-left: auto;
+    gap: 1rem;
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* #region Footer */
+footer {
+    background-color: var(--sd-grey);
+}
+
+footer a {
+    color: var(--sd-dark);
+    text-decoration: none;
+}
+
+footer h2 {
+    color: var(--sd-dark);
+}
+
+p.newletter-banner {
+    color: var(--sd-grey);
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* #region Produkte Slider */
+.sd-highlight-image {
+    background-color: var(--sd-grey);
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.sd-highlight-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.sd-slider-next {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    font-size: 3rem;
+}
+
+.product-image-box {
+    background-color: var(--sd-grey);
+    aspect-ratio: 1 / 1;
+    padding: 2rem;
+}
+/* #endregion */
+/* ------------------------------------------------------------------ */

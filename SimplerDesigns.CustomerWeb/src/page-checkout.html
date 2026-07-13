@@ -1,0 +1,47 @@
+<div class="container py-5">
+    <h1>Kasse</h1>
+    <hr>
+    <div class="row g-4">
+
+        <!-- Links: Adresse + Zahlung -->
+        <div class="col-12 col-lg-8">
+
+            <h4>Lieferadresse</h4>
+            <select id="selectDelivery" class="form-select mt-2"></select>
+
+            <h4 class="mt-4">Zahlungsmethode</h4>
+            <div class="d-flex flex-column gap-2 mt-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="payCard" value="card">
+                    <label class="form-check-label" for="payCard">Kreditkarte (Visa / Mastercard)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="payPaypal" value="paypal">
+                    <label class="form-check-label" for="payPaypal">PayPal</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="payInvoice" value="invoice">
+                    <label class="form-check-label" for="payInvoice">Auf Rechnung</label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Rechts: Kostenübersicht -->
+        <div class="col-12 col-lg-4">
+            <div class="card p-3">
+                <h5>Übersicht</h5>
+                <div id="orderSummary" class="mt-2"></div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span>Versand</span><span id="checkoutShipping"></span>
+                </div>
+                <div class="d-flex justify-content-between fw-bold mt-2">
+                    <span>Gesamt</span><span id="checkoutTotal"></span>
+                </div>
+                <button id="buttonPay" class="btn btn-primary w-100 mt-3">Zahlungspflichtig bezahlen</button>
+            </div>
+        </div>
+
+    </div>
+</div>

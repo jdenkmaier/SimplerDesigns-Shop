@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <h1>Abrechnung</h1>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-auto">
+            <label class="form-label">Jahr</label>
+            <select id="selYear" class="form-select"></select>
+        </div>
+        <div class="col-auto">
+            <label class="form-label">Monat</label>
+            <select id="selMonth" class="form-select"></select>
+        </div>
+    </div>
+
+    <div class="row mb-4 d-none" id="rowSummary">
+        <div class="col-12 col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-muted small">Einnahmen gesamt</div>
+                    <div class="fs-4 fw-bold" id="lblTotalRevenue">-</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-muted small">Bestellungen gesamt</div>
+                    <div class="fs-4 fw-bold" id="lblTotalOrders">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Monat</th>
+                        <th class="text-end">Bestellungen</th>
+                        <th class="text-end">Einnahmen</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyAccounting">
+                    <tr><td colspan="3" class="text-center text-muted">Lade Daten...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

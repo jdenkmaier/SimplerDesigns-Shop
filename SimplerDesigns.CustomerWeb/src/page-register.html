@@ -1,0 +1,92 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+
+            <h1>Konto erstellen</h1>
+
+            <!-- Persönliche Daten -->
+            <hr>
+            <h2>Persönliche Daten</h2>
+
+            <div class="row g-3 mt-1">
+                <div class="col-6">
+                    <label for="inputName">Vorname</label>
+                    <input type="text" id="inputName" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label for="inputSurname">Nachname</label>
+                    <input type="text" id="inputSurname" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label for="inputMail">E-Mail</label>
+                    <input type="email" id="inputMail" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label for="inputLoginName">Nutzername</label>
+                    <input type="text" id="inputLoginName" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label for="inputPassword">Passwort</label>
+                    <input type="password" id="inputPassword" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label for="inputPasswordConfirm">Passwort bestätigen</label>
+                    <input type="password" id="inputPasswordConfirm" class="form-control" />
+                </div>
+            </div>
+
+            <!-- Rechnungsadresse -->
+            <hr class="mt-4">
+            <h2>Rechnungsadresse</h2>
+
+            <div class="row g-3 mt-1">
+                <div class="col-12">
+                    <label for="inputAdress">Straße &amp; Hausnummer</label>
+                    <input type="text" id="inputAdress" class="form-control" />
+                </div>
+                <div class="col-8">
+                    <label for="inputCity">Stadt</label>
+                    <input type="text" id="inputCity" class="form-control" />
+                </div>
+                <div class="col-4">
+                    <label for="inputCountry">Land</label>
+                    <select id="inputCountry" class="form-select">
+                        <option value="">-- bitte wählen --</option>
+                        <option value="DE">Deutschland</option>
+                        <option value="AT">Österreich</option>
+                        <option value="CH">Schweiz</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Lieferadressen -->
+            <hr class="mt-4">
+            <div class="d-flex align-items-center gap-3">
+                <h2 class="mb-0">Lieferadressen</h2>
+                <button type="button" class="btn btn-secondary btn-sm" id="buttonAddDelivery">
+                    <i class="bi bi-plus me-1"></i>Hinzufügen
+                </button>
+            </div>
+
+            <div id="deliveryList" class="d-flex flex-column gap-3 mt-3"></div>
+
+            <!-- Newsletter -->
+            <hr class="mt-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkNewsletter">
+                <label class="form-check-label" for="checkNewsletter">Newsletter abonnieren</label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2 mt-4">
+                <button type="button" class="btn btn-primary" id="buttonSave">
+                    <i class="bi bi-check-lg me-2"></i>Registrieren
+                </button>
+                <a id="buttonCancel" href="#login" class="btn btn-secondary">
+                    <i class="bi bi-x-lg me-2"></i>Abbrechen
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
