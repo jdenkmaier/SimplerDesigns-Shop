@@ -1,8 +1,4 @@
-<h1>Inhaltsverzeichnis</h1>
-[Allgemein](#allgemein)
-
-
-# Allgemein
+<h1>Allgemein</h1>
 Simpler Designs Onlineshop
 Im Rahmen meines Wifi Kurses habe ich als Abschlussprojekt ein Mockup für einen Onlineshop erstellt.
 
